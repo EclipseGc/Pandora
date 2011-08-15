@@ -1,0 +1,25 @@
+body {
+  background-color:%grandient_top;
+  font-family:Helvetica, Arial, FreeSans, sans-serif;
+  font-size:1em;
+}
+
+#header {
+  background-color:%body_background;
+}
+
+/*#navigation {
+  
+}*/
+
+#content {
+  background-color:%body_background;
+  color:%body_text;
+}
+
+#content a,
+#content a:active,
+#content a:visited,
+#content a:hover {
+  color:%body_link
+}

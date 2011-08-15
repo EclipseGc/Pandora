@@ -1,0 +1,10 @@
+name = Pandora
+description = A 960.gs and ctools stylizer based base theme.
+core = 7.x
+stylesheets[all][] = layout.css
+
+;Plugin directories
+plugins[themes_stylizer][theme_style] = plugins/theme_style
+
+;Theme style
+theme_style[default] = pandora
