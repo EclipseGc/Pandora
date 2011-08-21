@@ -5,6 +5,11 @@ stylesheets[all][] = layout.css
 
 ;Plugin directories
 plugins[themes_stylizer][theme_style] = plugins/theme_style
+plugins[panels][layouts] = plugins/layouts
 
 ;Theme style
 theme_style[default] = pandora
+
+;Panels Everywhere
+;api[page_manager][pages_default][version] = 1
+;api[page_manager][pages_default][path] = pages

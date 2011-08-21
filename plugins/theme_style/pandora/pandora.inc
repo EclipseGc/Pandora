@@ -14,6 +14,30 @@ $plugin = array(
       'label' => t('Background Gradient Bottom'),
       'default_value' => '#3f3f3f',
     ),
+    'header_background' => array(
+      'label' => t('Header Background'),
+      'default_value' => '#FFFFFF',
+    ),
+    'header_text' => array(
+      'label' => t('Header Text'),
+      'default_value' => '#333333',
+    ),
+    'navigation_background' => array(
+      'label' => t('Navigation Background'),
+      'default_value' => '#b00d14',
+    ),
+    'navigation_link' => array(
+      'label' => t('Navigation Link Text'),
+      'default_value' => '#ffffff',
+    ),
+    'navigation_link_hover_background' => array(
+      'label' => t('Navigation Link Hover Background'),
+      'default_value' => '#ffffff',
+    ),
+    'navigation_link_hover' => array(
+      'label' => t('Navigation Link Hover Text'),
+      'default_value' => '#000000',
+    ),
     'body_background' => array(
       'label' => t('Body Background'),
       'default_value' => '#FFFFFF',
