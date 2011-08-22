@@ -6,6 +6,7 @@ stylesheets[all][] = layout.css
 ;Plugin directories
 plugins[themes_stylizer][theme_style] = plugins/theme_style
 plugins[panels][layouts] = plugins/layouts
+plugins[ctools][content_types] = plugins/content_types
 
 ;Theme style
 theme_style[default] = pandora
