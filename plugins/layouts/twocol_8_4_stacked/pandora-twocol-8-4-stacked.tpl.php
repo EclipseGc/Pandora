@@ -1,11 +1,11 @@
 <div id="pandora-container" class="container_12 clearfix">
   <div id="header" class="grid_12">
     <div class="right"></div>
-    <div class="bottom"></div>
     <div class="left"></div>
     <?php print $content['header']; ?>
   </div>
   <div id="navigation" class="grid_12">
+    <div class="top"></div>
     <div class="right"></div>
     <div class="br"></div>
     <div class="bottom"></div>

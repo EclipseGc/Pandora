@@ -380,7 +380,6 @@ body {
   width:5px;
   height:5px;
   position:absolute;
-  z-index:9999;
 }
 
 .tl {
@@ -412,7 +411,6 @@ body {
 .bottom,
 .right {
   position:absolute;
-  z-index:9999;
 }
 
 .top {
@@ -453,9 +451,11 @@ body {
   bottom:0;
 }
 
-#header .bottom {
+#navigation .top {
+  background-image:url('images/bottom.png');
   left:0;
   right:0;
+  top:0;
 }
 
 #navigation .right,

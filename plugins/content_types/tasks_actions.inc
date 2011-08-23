@@ -18,8 +18,9 @@ $plugin = array(
   'category' => t('Pandora Content'),
   'render last' => TRUE,
   'defaults' => array(
-    'type' => 'both',
-    'id' => 'tabs',
+    'primary' => TRUE,
+    'secondary' => TRUE,
+    'actions' => TRUE,
   ),
 );
 
@@ -28,46 +29,42 @@ $plugin = array(
  *
  * Outputs the tabs (local tasks) of the current page.
  */
-function ctools_page_tabs_content_type_render($subtype, $conf, $panel_args) {
+function pandora_tasks_actions_content_type_render($subtype, $conf, $panel_args) {
   $block = new stdClass();
-  $menus = menu_local_tabs();
-  switch ($conf['type']) {
-    case 'primary':
-      unset($menus['#secondary']);
-      break;
-    case 'secondary':
-      unset($menus['#primary']);
-      break;
+  $links = menu_local_tasks();
+  $block->content = array();
+  if ($conf['primary'] && $links['tabs']['count'] > 1) {
+      $block->content['primary'] .= $links['tabs']['output'];
   }
-  if ($conf['id']) {
-    $menus['#theme_wrappers'][] = 'container';
-    $menus['#attributes']['id'] = $conf['id'];
+  if ($conf['actions']) {
+    $block->content['actions'] .= $links['actions']['output'];
   }
-
-  $block->content = $menus;
-
+  if ($conf['secondary']) {
+    $links = menu_local_tasks(1);
+    $block->content['secondary'] .= $links['tabs']['count'] > 1 ? $links['tabs']['output'] : '';
+  }
+drupal_set_message('<pre>' . var_export($block->content, TRUE) . '</pre>');
   return $block;
 }
 
 
-function ctools_page_tabs_content_type_edit_form($form, &$form_state) {
+function pandora_tasks_actions_content_type_edit_form($form, &$form_state) {
   $conf = $form_state['conf'];
 
-  $form['type'] = array(
-    '#title' => t('Tabs type'),
-    '#type' => 'select',
-    '#options' => array(
-      'both' => t('Primary and secondary'),
-      'primary' => t('Primary'),
-      'secondary' => t('Secondary'),
-    ),
-    '#default_value' => $conf['type'],
+  $form['primary'] = array(
+    '#title' => t('Primary Tabs'),
+    '#type' => 'checkbox',
+    '#default_value' => $conf['primary'],
   );
-
-  $form['id'] = array(
-    '#title' => t('CSS id to use'),
-    '#type' => 'textfield',
-    '#default_value' => $conf['id'],
+  $form['secondary'] = array(
+    '#title' => t('Secondary Tabs'),
+    '#type' => 'checkbox',
+    '#default_value' => $conf['secondary'],
+  );
+  $form['actions'] = array(
+    '#title' => t('Local Actions'),
+    '#type' => 'checkbox',
+    '#default_value' => $conf['actions'],
   );
   return $form;
 }
@@ -75,7 +72,7 @@ function ctools_page_tabs_content_type_edit_form($form, &$form_state) {
 /**
  * The submit form stores the data in $conf.
  */
-function ctools_page_tabs_content_type_edit_form_submit($form, &$form_state) {
+function pandora_tasks_actions_content_type_edit_form_submit($form, &$form_state) {
   foreach (array_keys($form_state['plugin']['defaults']) as $key) {
     if (isset($form_state['values'][$key])) {
       $form_state['conf'][$key] = $form_state['values'][$key];
