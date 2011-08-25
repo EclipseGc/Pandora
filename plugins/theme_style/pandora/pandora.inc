@@ -6,11 +6,11 @@ $plugin = array(
   'form submit' => 'pandora_themes_stylizer_form_submit',
   'css' => 'supplemental.css',
   'palette' => array(
-    'grandient_top' => array(
+    'gradient_top' => array(
       'label' => t('Background Gradient Top'),
       'default_value' => '#252525',
     ),
-    'grandient_bottom' => array(
+    'gradient_bottom' => array(
       'label' => t('Background Gradient Bottom'),
       'default_value' => '#3f3f3f',
     ),
@@ -50,6 +50,26 @@ $plugin = array(
       'label' => t('Body Link'),
       'default_value' => '#b00d14',
     ),
+    'tasks_background' => array(
+      'label' => t('Tasks Background'),
+      'default_value' => '#3f3f3f',
+    ),
+    'tasks_text' => array(
+      'label' => t('Tasks Text'),
+      'default_value' => '#ffffff',
+    ),
+    'tasks_link' => array(
+      'label' => t('Tasks Link Text'),
+      'default_value' => '#c2c2c2',
+    ),
+    'actions_background' => array(
+      'label' => t('Actions Background'),
+      'default_value' => '#242424',
+    ),
+    'actions_link' => array(
+      'label' => t('Actions Link Text'),
+      'default_value' => '#ffffff',
+    ),
     'footer_background' => array(
       'label' => t('Footer Background'),
       'default_value' => '#252525',
@@ -62,5 +82,13 @@ $plugin = array(
       'label' => t('Footer Link'),
       'default_value' => '#c2c2c2',
     ),
+  ),
+  'actions' => array(
+    array('load', 'plus', 'add.png'),
+    array('colorize', 'actions_link'),
+    array('slice', 'add.png', 0, 0, 9, 9),
+    array('new', 'gradient', 1, 900),
+    array('gradient', 'gradient_top', 'gradient_bottom', 0, 0, 1, 900,),
+    array('slice', 'gradient.png', 0, 0, 1, 900),
   ),
 );

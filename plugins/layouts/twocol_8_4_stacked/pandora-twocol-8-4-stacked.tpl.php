@@ -2,7 +2,7 @@
   <div id="header" class="grid_12">
     <div class="right"></div>
     <div class="left"></div>
-    <?php print $content['header']; ?>
+    <div id="header-inner"><?php print $content['header']; ?></div>
   </div>
   <div id="navigation" class="grid_12">
     <div class="top"></div>

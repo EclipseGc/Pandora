@@ -1,14 +1,6 @@
 body {
-  background-color:%grandient_top;
-  font-family:Helvetica, Arial, FreeSans, sans-serif;
-  font-size:1em;
-  margin:0;
-  padding:0;
-}
-
-#pandora-container {
-  clear:both;
-  margin-bottom:20px;
+  background-image: url(gradient.png);
+  background-color:%gradient_bottom;
 }
 
 #header {
@@ -18,23 +10,9 @@ body {
 
 #navigation {
   background-color:%navigation_background;
-  margin-bottom:20px;
-}
-
-#navigation ul.primary-links {
-  list-style-type: none; /*to remove bullets*/
-  text-align: center;
-  margin: 0 auto;
-  padding: 0px;
-  display:table;
-  overflow: hidden;
 }
 
 #navigation ul.primary-links li {
-  float: left;
-  width: 130px;
-  margin-left: auto ;
-  margin-right: auto ;
   color:%navigation_link;
 }
 
@@ -42,10 +20,6 @@ body {
 #navigation ul.primary-links li a:active,
 #navigation ul.primary-links li a:visited {
   color:%navigation_link;
-  text-decoration:none;
-  display:block;
-  width:100px;
-  padding:8px 0;
 }
 
 #navigation ul.primary-links li a:hover {
@@ -63,23 +37,11 @@ body {
 #content a:visited,
 #content a:hover {
   color:%body_link;
-  text-decoration:none;
-}
-
-#content h2 a {
-  font-weight:normal;
-}
-
-#content-inner {
-  margin:10px;
 }
 
 #footer {
-  clear:both;
   background-color:%footer_background;
   color:%footer_text;
-  margin-bottom:-1em;
-  padding:1em 0;
 }
 
 #footer a,
@@ -87,4 +49,32 @@ body {
 #footer a:visited,
 #footer a:hover {
   color:%footer_link
+}
+
+#primary-tabs {
+  background-color:%tasks_background;
+  color:%tasks_text;
+}
+
+#primary-tabs a,
+#primary-tabs a:active,
+#primary-tabs a:visited,
+#primary-tabs a:hover {
+  color:%tasks_link;
+}
+
+#contextual-actions {
+  background-color:%actions_background;
+  color:%actions_text;
+}
+
+#contextual-actions a,
+#contextual-actions a:active,
+#contextual-actions a:visited,
+#contextual-actions a:hover {
+  color:%actions_link;
+}
+
+ul#contextual-actions li a {
+  background-image: url(add.png);
 }
