@@ -1,16 +1,20 @@
 <?php
 
+/**
+ * Inspired by the BiscuitPortabello color scheme on kuler.adobe.com.
+ */
+
 $plugin = array(
-  'style name' => t('Pandora'),
+  'style name' => t('Portabello'),
   'css' => 'supplemental.css',
   'palette' => array(
     'gradient_top' => array(
       'label' => t('Background Gradient Top'),
-      'default_value' => '#252525',
+      'default_value' => '#ECE1CF',
     ),
     'gradient_bottom' => array(
       'label' => t('Background Gradient Bottom'),
-      'default_value' => '#3f3f3f',
+      'default_value' => '#ECE1CF',
     ),
     'header_background' => array(
       'label' => t('Header Background'),
@@ -18,11 +22,11 @@ $plugin = array(
     ),
     'header_text' => array(
       'label' => t('Header Text'),
-      'default_value' => '#333333',
+      'default_value' => '#937E62',
     ),
     'navigation_background' => array(
       'label' => t('Navigation Background'),
-      'default_value' => '#b00d14',
+      'default_value' => '#647E87',
     ),
     'navigation_link' => array(
       'label' => t('Navigation Link Text'),
@@ -30,11 +34,11 @@ $plugin = array(
     ),
     'navigation_link_hover_background' => array(
       'label' => t('Navigation Link Hover Background'),
-      'default_value' => '#ffffff',
+      'default_value' => '#ECE1CF',
     ),
     'navigation_link_hover' => array(
       'label' => t('Navigation Link Hover Text'),
-      'default_value' => '#000000',
+      'default_value' => '#3f3f3f',
     ),
     'body_background' => array(
       'label' => t('Body Background'),
@@ -42,15 +46,15 @@ $plugin = array(
     ),
     'body_text' => array(
       'label' => t('Body Text'),
-      'default_value' => '#333333',
+      'default_value' => '#937E62',
     ),
     'body_link' => array(
       'label' => t('Body Link'),
-      'default_value' => '#b00d14',
+      'default_value' => '#647E87',
     ),
     'tasks_background' => array(
       'label' => t('Tasks Background'),
-      'default_value' => '#3f3f3f',
+      'default_value' => '#647E87',
     ),
     'tasks_text' => array(
       'label' => t('Tasks Text'),
@@ -58,15 +62,15 @@ $plugin = array(
     ),
     'tasks_link' => array(
       'label' => t('Tasks Link Text'),
-      'default_value' => '#c2c2c2',
+      'default_value' => '#ffffff',
     ),
     'actions_background' => array(
       'label' => t('Actions Background'),
-      'default_value' => '#242424',
+      'default_value' => '#E1B8A6',
     ),
     'actions_link' => array(
       'label' => t('Actions Link Text'),
-      'default_value' => '#ffffff',
+      'default_value' => '#252525',
     ),
     'footer_background' => array(
       'label' => t('Footer Background'),

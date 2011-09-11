@@ -5,7 +5,7 @@ stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/style.css
 
 ;Plugin directories
-plugins[themes_stylizer][theme_style] = plugins/theme_style
+plugins[color_deck][theme_style] = plugins/theme_style
 plugins[panels][layouts] = plugins/layouts
 plugins[ctools][content_types] = plugins/content_types
 
